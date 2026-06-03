@@ -86,7 +86,7 @@ a{color:inherit;text-decoration:none;}
 .browser-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;background:#EDF1F6;border-bottom:1px solid var(--line);}
 .tl{width:11px;height:11px;border-radius:50%;}
 .url{flex:1;margin-left:10px;background:#fff;border-radius:7px;height:26px;display:flex;align-items:center;padding:0 12px;font-size:12px;color:var(--muted-2);font-family:var(--body);gap:7px;}
-.sylectus{background:linear-gradient(180deg,#fbfcfe,#f1f5f9);min-height:430px;position:relative;padding:18px;}
+.sylectus{background:linear-gradient(180deg,#fbfcfe,#f1f5f9);min-height:480px;position:relative;padding:18px;}
 /* faux load board behind */
 .lb-head{height:34px;border-radius:8px;background:#23416b;display:flex;align-items:center;padding:0 14px;color:#cdd9e9;font-size:12px;font-weight:700;font-family:var(--body);letter-spacing:.04em;}
 .lb-row{height:30px;border-radius:6px;background:#fff;border:1px solid #e8edf3;margin-top:9px;display:flex;align-items:center;gap:10px;padding:0 12px;}
@@ -109,7 +109,7 @@ a{color:inherit;text-decoration:none;}
 .chip.dist{background:var(--navy);color:#fff;}
 .chip.eta{background:var(--green-soft);color:#1F9C54;display:flex;align-items:center;gap:5px;}
 .chip.eta::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);}
-.bid-wrap{margin-top:14px;background:#F7F9FC;border:1px solid var(--line);border-radius:10px;padding:11px 14px;text-align:center;}
+.bid-wrap{margin-top:12px;background:#F7F9FC;border:1px solid var(--line);border-radius:10px;padding:11px 14px;text-align:center;}
 .bid-amount{font-family:var(--display);font-weight:700;font-size:34px;color:var(--navy);letter-spacing:-.02em;}
 .bid-cap{font-family:var(--body);font-size:11px;font-weight:600;color:var(--muted-2);}
 .panel-actions{display:flex;gap:9px;margin-top:13px;}
@@ -120,6 +120,38 @@ a{color:inherit;text-decoration:none;}
 .float-badge .fb-ic{width:30px;height:30px;border-radius:8px;background:var(--green-soft);display:flex;align-items:center;justify-content:center;}
 .float-badge .fb-v{font-family:var(--display);font-weight:700;font-size:15px;color:var(--navy);line-height:1;}
 .float-badge .fb-l{font-family:var(--body);font-size:11px;color:var(--muted);font-weight:600;}
+
+/* hero panel — broker rating */
+.broker-rating{display:flex;align-items:center;gap:6px;margin-top:4px;}
+.broker-stars{color:var(--gold);font-size:14px;letter-spacing:1px;line-height:1;}
+.broker-avg{font-family:var(--display);font-weight:700;font-size:14px;color:var(--navy);}
+.broker-count{font-size:11px;color:var(--muted-2);font-weight:600;}
+.broker-name{font-size:11px;color:var(--muted);font-weight:600;margin-top:4px;}
+
+/* broker ratings spotlight */
+.broker-spot{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.broker-spot-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center;}
+.broker-spot-copy h2{font-size:clamp(30px,3.4vw,42px);margin-top:14px;}
+.broker-spot-copy > p{color:var(--muted);font-size:18px;margin-top:16px;max-width:480px;}
+.broker-spot-list{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-direction:column;gap:18px;}
+.broker-spot-list li{display:flex;gap:14px;align-items:flex-start;}
+.spot-ic{flex:none;width:38px;height:38px;border-radius:10px;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;}
+.broker-spot-list strong{display:block;font-size:16px;margin-bottom:3px;}
+.broker-spot-list span{color:var(--muted);font-size:14.5px;}
+.broker-card{background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-lg);border:1px solid var(--line);overflow:hidden;}
+.broker-card-head{background:var(--navy);color:#fff;font-family:var(--body);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 20px;}
+.broker-card-body{padding:22px 20px 20px;}
+.broker-card-stars{color:var(--gold);font-size:22px;letter-spacing:2px;}
+.broker-card-score{margin-top:6px;display:flex;align-items:baseline;gap:8px;}
+.broker-card-score .big{font-family:var(--display);font-weight:700;font-size:32px;color:var(--navy);}
+.broker-card-score .cnt{font-size:13px;color:var(--muted-2);font-weight:600;}
+.broker-card-meta{font-size:13px;color:var(--muted);font-weight:700;margin-top:8px;padding-bottom:16px;border-bottom:1px solid var(--line);}
+.broker-review{padding:14px 0;border-bottom:1px solid var(--line);}
+.broker-review:last-of-type{border-bottom:0;}
+.broker-review-stars{color:var(--gold);font-size:13px;letter-spacing:1px;margin-bottom:6px;}
+.broker-review p{font-size:14px;color:var(--navy);font-style:italic;line-height:1.45;}
+.broker-rate-btn{margin-top:16px;background:none;border:0;padding:0;font-family:var(--body);font-size:12px;font-weight:700;color:var(--navy);text-decoration:underline;cursor:pointer;}
+.broker-rate-btn:hover{color:var(--gold-deep);}
 
 /* ---------- sections ---------- */
 section{padding:88px 0;}
@@ -202,6 +234,7 @@ section{padding:88px 0;}
 /* ---------- responsive ---------- */
 @media(max-width:980px){
   .hero-grid{grid-template-columns:1fr;gap:48px;}
+  .broker-spot-grid{grid-template-columns:1fr;gap:40px;}
   .ps-grid{grid-template-columns:1fr;}
   .feat-grid{grid-template-columns:1fr 1fr;}
   .tgrid{grid-template-columns:1fr;}

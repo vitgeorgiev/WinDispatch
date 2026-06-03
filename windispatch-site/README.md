@@ -48,7 +48,7 @@ Type: **Space Grotesk** (display / headings), **Manrope** (body).
 
 ## Sections
 
-Hero · Problem/Solution · Features (6) · How it works (3 steps) · Social proof + testimonials · CTA · Footer.
+Hero · Problem/Solution · Features (7) · Broker ratings spotlight · How it works (3 steps) · Social proof + testimonials · CTA · Footer.
 
 ## Deploy
 
@@ -60,4 +60,4 @@ Hero · Problem/Solution · Features (6) · How it works (3 steps) · Social pro
 - Confirm the testimonials (currently placeholder names/companies) before publishing.
 
 ---
-Version shown in UI: **v2.3.0**
+Version shown in UI: **v2.5.0**

@@ -1,0 +1,11 @@
+{
+  "name": "windispatch-api",
+  "version": "1.0.0",
+  "description": "WinDispatch broker ratings API",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "@vercel/kv": "^3.0.0"
+  }
+}

@@ -9,11 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-<meta name="description" content="WinDispatch — a one-click bidding Chrome extension for freight dispatchers on the Sylectus load board. Pre-filled bid amount, live ETA and saved trucks." />
+<meta name="description" content="WinDispatch — one-click bidding for Sylectus dispatchers. Pre-filled bids, live ETA, saved trucks, and community broker ratings by MC number." />
 <link rel="canonical" href="https://windispatch.com/" />
 <meta property="og:url" content="https://windispatch.com/" />
 <meta property="og:title" content="WinDispatch — One-click bidding for Sylectus dispatchers" />
-<meta property="og:description" content="Win the load before the other guy finishes typing. One-click bidding panel on your Sylectus load board." />
+<meta property="og:description" content="Win the load before the other guy finishes typing. One-click bidding plus community broker ratings on your Sylectus load board." />
 <meta property="og:type" content="website" />
 </head>
 <body>
@@ -33,7 +33,7 @@
       <a href="#proof">Reviews</a>
     </nav>
     <div class="nav-cta">
-      <span class="btn-sub">v2.3.0</span>
+      <span class="btn-sub">v2.5.0</span>
       <a class="btn btn-gold" href="https://chromewebstore.google.com/detail/windispatch-%E2%80%94-smart-biddi/fnnoiemkomajdccjbimifaepkbbkokil" target="_blank" rel="noopener noreferrer">
         <svg class="chrome" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="9" fill="#fff"/><path d="M24 5a19 19 0 0 1 16.45 9.5H24a9.5 9.5 0 0 0-8.23 4.75L8.6 6.9A19 19 0 0 1 24 5Z" fill="#0C1B33" opacity=".9"/><path d="M5 24a19 19 0 0 1 3.6-11.1l8.17 14.16A9.5 9.5 0 0 0 25 33l-4.2 9.8A19 19 0 0 1 5 24Z" fill="#1C3A5E"/><path d="M43 24a19 19 0 0 1-19 19l8.17-14.16A9.5 9.5 0 0 0 33 24a9.5 9.5 0 0 0-1.27-4.75H43c.66 0 1 .8 0 4.75Z" fill="#C2A35B"/></svg>
         Add to Chrome
@@ -50,7 +50,7 @@
     <div class="hero-copy reveal">
       <span class="eyebrow">Chrome extension for Sylectus</span>
       <h1>Win the load before <span class="hl">the other guy</span> finishes typing.</h1>
-      <p class="sub">WinDispatch drops a one-click bidding panel right onto your Sylectus load board — pre-filled bid amount, live ETA, and your saved trucks. Stop re-typing the same numbers on every load.</p>
+      <p class="sub">WinDispatch drops a one-click bidding panel right onto your Sylectus load board — pre-filled bid amount, live ETA, saved trucks, and community broker ratings before you submit.</p>
       <div class="hero-cta">
         <a class="btn btn-gold" href="https://chromewebstore.google.com/detail/windispatch-%E2%80%94-smart-biddi/fnnoiemkomajdccjbimifaepkbbkokil" target="_blank" rel="noopener noreferrer">
           <svg class="chrome" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="9" fill="#fff"/><path d="M24 5a19 19 0 0 1 16.45 9.5H24a9.5 9.5 0 0 0-8.23 4.75L8.6 6.9A19 19 0 0 1 24 5Z" fill="#0C1B33" opacity=".9"/><path d="M5 24a19 19 0 0 1 3.6-11.1l8.17 14.16A9.5 9.5 0 0 0 25 33l-4.2 9.8A19 19 0 0 1 5 24Z" fill="#1C3A5E"/><path d="M43 24a19 19 0 0 1-19 19l8.17-14.16A9.5 9.5 0 0 0 33 24a9.5 9.5 0 0 0-1.27-4.75H43c.66 0 1 .8 0 4.75Z" fill="#C2A35B"/></svg>
@@ -100,6 +100,13 @@
                 <span class="chip dist">307 mi</span>
                 <span class="chip eta">ETA 08:30 EST</span>
               </div>
+              <div class="field-label" style="margin-top:12px">Broker rating</div>
+              <div class="broker-rating">
+                <span class="broker-stars">★★★★½</span>
+                <span class="broker-avg">4.2</span>
+                <span class="broker-count">(15)</span>
+              </div>
+              <div class="broker-name">JUNG EXPRESS · MC 1337281</div>
               <div class="bid-wrap">
                 <div class="bid-cap">SUGGESTED BID</div>
                 <div class="bid-amount">$767.50</div>
@@ -149,6 +156,10 @@
           <span class="ps-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12h13M11 7l5 5-5 5" stroke="#C24B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 5v14" stroke="#C24B4B" stroke-width="2" stroke-linecap="round"/></svg></span>
           <div><h4>You're always a step behind</h4><p>By the time the form is filled, a faster dispatcher already took the load.</p></div>
         </div>
+        <div class="ps-item">
+          <span class="ps-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.8 5.8 22.3l2.4-7.4L2 10.4h7.6L12 3z" stroke="#C24B4B" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+          <div><h4>No idea who the broker is</h4><p>You bid blind — no quick way to see if other dispatchers had a good experience with that MC.</p></div>
+        </div>
       </div>
       <div class="ps-col sol reveal">
         <h3>With WinDispatch</h3>
@@ -163,6 +174,10 @@
         <div class="ps-item">
           <span class="ps-ic"><svg width="22" height="22" viewBox="0 0 64 64"><path d="M37 4 L13 35 H27 L24 60 L51 27 H35 L40 4 Z" fill="#D4B978"/></svg></span>
           <div><h4>Submit in seconds</h4><p>Be the first bid in the queue — every time, on every load that fits your trucks.</p></div>
+        </div>
+        <div class="ps-item">
+          <span class="ps-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.8 5.8 22.3l2.4-7.4L2 10.4h7.6L12 3z" stroke="#D4B978" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+          <div><h4>Broker ratings in the panel</h4><p>See community star ratings by MC number — and rate brokers yourself after a load.</p></div>
         </div>
       </div>
     </div>
@@ -207,6 +222,46 @@
         <span class="feat-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z" stroke="#D4B978" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="#D4B978" stroke-width="2"/></svg></span>
         <h3>ZIP-based location</h3>
         <p>Set truck positions by ZIP code. Distances and ETAs recalculate the moment a truck moves.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="feat-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.8 5.8 22.3l2.4-7.4L2 10.4h7.6L12 3z" stroke="#D4B978" stroke-width="2" stroke-linejoin="round"/></svg></span>
+        <h3>Broker ratings</h3>
+        <p>Community star ratings by MC number, right in the bid panel. Rate brokers after delivery — see what others think before you bid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BROKER RATINGS SPOTLIGHT ============ -->
+<section id="broker-ratings" class="broker-spot" data-screen-label="broker-ratings">
+  <div class="wrap broker-spot-grid">
+    <div class="broker-spot-copy reveal">
+      <span class="eyebrow">New in v2.5</span>
+      <h2>Know who you're bidding with</h2>
+      <p>Every Sylectus load has a broker MC. WinDispatch shows aggregated ratings from other dispatchers — before you commit to the bid.</p>
+      <ul class="broker-spot-list">
+        <li><span class="spot-ic">★</span><div><strong>Star ratings by MC</strong><span>Average score and review count pulled automatically from the load page.</span></div></li>
+        <li><span class="spot-ic">✎</span><div><strong>Rate from the same panel</strong><span>Leave stars and a short note after delivery — no extra tabs.</span></div></li>
+        <li><span class="spot-ic">⚡</span><div><strong>Built for speed</strong><span>Ratings load in the background while you pick a truck and review the bid.</span></div></li>
+      </ul>
+    </div>
+    <div class="broker-spot-visual reveal">
+      <div class="broker-card">
+        <div class="broker-card-head">Broker rating</div>
+        <div class="broker-card-body">
+          <div class="broker-card-stars">★★★★☆</div>
+          <div class="broker-card-score"><span class="big">4.2</span> <span class="cnt">(15 reviews)</span></div>
+          <div class="broker-card-meta">JUNG EXPRESS · MC 1337281</div>
+          <div class="broker-review">
+            <div class="broker-review-stars">★★★★★</div>
+            <p>"Paid in 12 days, good communication."</p>
+          </div>
+          <div class="broker-review">
+            <div class="broker-review-stars">★★★★☆</div>
+            <p>"Solid broker, would haul again."</p>
+          </div>
+          <button class="broker-rate-btn" type="button">+ Rate this broker</button>
+        </div>
       </div>
     </div>
   </div>
@@ -266,7 +321,7 @@
       </div>
       <div class="tcard reveal">
         <div class="stars">★★★★★</div>
-        <q>Running six sprinters, I was drowning in tabs. Now I switch trucks and submit from one panel. Game changer.</q>
+        <q>Running six sprinters, I was drowning in tabs. Now I switch trucks, check broker ratings, and submit from one panel. Game changer.</q>
         <div class="tperson">
           <span class="tavatar">JO</span>
           <span><span class="tn">Joel Okafor</span><br><span class="tc">Owner-Operator · Northbound Logistics</span></span>
@@ -304,14 +359,13 @@
     <div class="foot-links">
       <a href="#">Privacy Policy</a>
       <a href="#">Support</a>
-      <span class="ver">v2.3.0</span>
+      <span class="ver">v2.5.0</span>
     </div>
   </div>
 </footer>
 
 <script>
   // reveal disabled for reliability — content is always visible
-</script>
 </script>
 
 </body>

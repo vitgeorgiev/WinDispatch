@@ -1,6 +1,6 @@
 # WinDispatch
 
-Marketing site for [WinDispatch](https://windispatch.com) — one-click bidding Chrome extension for Sylectus dispatchers.
+Marketing site for [WinDispatch](https://windispatch.com) — one-click bidding Chrome extension with community broker ratings for Sylectus dispatchers.
 
 The static landing page lives in [`windispatch-site/`](windispatch-site/).
 
@@ -10,15 +10,15 @@ The static landing page lives in [`windispatch-site/`](windispatch-site/).
 cd windispatch-site && python3 -m http.server 8000
 ```
 
+## Repo layout
+
+| Directory | Purpose |
+|-----------|---------|
+| [`windispatch-site/`](windispatch-site/) | Marketing landing page (static HTML + CSS) |
+| [`windispatch-api/`](windispatch-api/) | Broker ratings API (Vercel serverless + KV) |
+
 ## Deploy (Vercel)
 
-1. Import [vitgeorgiev/WinDispatch](https://github.com/vitgeorgiev/WinDispatch) on [vercel.com/new](https://vercel.com/new).
-2. Set **Root Directory** to `windispatch-site` (Framework Preset: **Other**).
-3. Deploy, then add domain **windispatch.com** in Project → Settings → Domains.
-4. Point DNS at Namecheap to Vercel (see Vercel domain setup — apex `76.76.21.21`, `www` → `cname.vercel-dns.com`).
+**Site:** import with root directory `windispatch-site`.
 
-CLI (after `npx vercel login`):
-
-```bash
-npx vercel --cwd windispatch-site --prod
-```
+**API:** import with root directory `windispatch-api`, connect a Vercel KV database named `windispatch-kv`, then redeploy. See [`windispatch-api/README.md`](windispatch-api/README.md).
