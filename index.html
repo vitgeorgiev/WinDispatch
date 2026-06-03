@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sylectus WinDispatch — One-click bidding for dispatchers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<meta name="description" content="WinDispatch — a one-click bidding Chrome extension for freight dispatchers on the Sylectus load board. Pre-filled bid amount, live ETA and saved trucks." />
+<link rel="canonical" href="https://windispatch.com/" />
+<meta property="og:url" content="https://windispatch.com/" />
+<meta property="og:title" content="WinDispatch — One-click bidding for Sylectus dispatchers" />
+<meta property="og:description" content="Win the load before the other guy finishes typing. One-click bidding panel on your Sylectus load board." />
+<meta property="og:type" content="website" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" data-screen-label="nav">
+      <span class="bolt-badge">
+        <svg width="20" height="20" viewBox="0 0 64 64"><path d="M37 4 L13 35 H27 L24 60 L51 27 H35 L40 4 Z" fill="#D4B978"/></svg>
+      </span>
+      Win<b>Dispatch</b>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#proof">Reviews</a>
+    </nav>
+    <div class="nav-cta">
+      <span class="btn-sub">v2.3.0</span>
+      <a class="btn btn-gold" href="#install">
+        <svg class="chrome" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="9" fill="#fff"/><path d="M24 5a19 19 0 0 1 16.45 9.5H24a9.5 9.5 0 0 0-8.23 4.75L8.6 6.9A19 19 0 0 1 24 5Z" fill="#0C1B33" opacity=".9"/><path d="M5 24a19 19 0 0 1 3.6-11.1l8.17 14.16A9.5 9.5 0 0 0 25 33l-4.2 9.8A19 19 0 0 1 5 24Z" fill="#1C3A5E"/><path d="M43 24a19 19 0 0 1-19 19l8.17-14.16A9.5 9.5 0 0 0 33 24a9.5 9.5 0 0 0-1.27-4.75H43c.66 0 1 .8 0 4.75Z" fill="#C2A35B"/></svg>
+        Add to Chrome
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" data-screen-label="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Chrome extension for Sylectus</span>
+      <h1>Win the load before <span class="hl">the other guy</span> finishes typing.</h1>
+      <p class="sub">WinDispatch drops a one-click bidding panel right onto your Sylectus load board — pre-filled bid amount, live ETA, and your saved trucks. Stop re-typing the same numbers on every load.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#install">
+          <svg class="chrome" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="9" fill="#fff"/><path d="M24 5a19 19 0 0 1 16.45 9.5H24a9.5 9.5 0 0 0-8.23 4.75L8.6 6.9A19 19 0 0 1 24 5Z" fill="#0C1B33" opacity=".9"/><path d="M5 24a19 19 0 0 1 3.6-11.1l8.17 14.16A9.5 9.5 0 0 0 25 33l-4.2 9.8A19 19 0 0 1 5 24Z" fill="#1C3A5E"/><path d="M43 24a19 19 0 0 1-19 19l8.17-14.16A9.5 9.5 0 0 0 33 24a9.5 9.5 0 0 0-1.27-4.75H43c.66 0 1 .8 0 4.75Z" fill="#C2A35B"/></svg>
+          Add to Chrome — Free
+        </a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+      <div class="hero-meta">
+        <span><span class="stars">★★★★★</span> 4.9 rating</span>
+        <span class="dot"></span>
+        <span>500+ dispatchers</span>
+        <span class="dot"></span>
+        <span>No account needed</span>
+      </div>
+    </div>
+
+    <!-- MOCKUP -->
+    <div class="mock reveal">
+      <div class="browser">
+        <div class="browser-bar">
+          <span class="tl" style="background:#ff5f57"></span>
+          <span class="tl" style="background:#febc2e"></span>
+          <span class="tl" style="background:#28c840"></span>
+          <span class="url">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M6 10V8a6 6 0 1 1 12 0v2" stroke="#8A97A6" stroke-width="2"/><rect x="4" y="10" width="16" height="10" rx="2" fill="#8A97A6"/></svg>
+            tracking.sylectus.net/loadboard
+          </span>
+        </div>
+        <div class="sylectus">
+          <div class="lb-head">SYLECTUS LOAD BOARD · AVAILABLE LOADS</div>
+          <div class="lb-row"><span class="lb-cell" style="width:60px"></span><span class="lb-cell" style="width:40px"></span><span class="lb-cell" style="width:90px"></span></div>
+          <div class="lb-row active"><span class="lb-cell" style="width:60px;background:var(--gold)"></span><span class="lb-cell" style="width:40px"></span><span class="lb-cell" style="width:74px"></span></div>
+          <div class="lb-row"><span class="lb-cell" style="width:50px"></span><span class="lb-cell" style="width:54px"></span><span class="lb-cell" style="width:64px"></span></div>
+          <div class="lb-row"><span class="lb-cell" style="width:70px"></span><span class="lb-cell" style="width:30px"></span><span class="lb-cell" style="width:84px"></span></div>
+
+          <!-- WinDispatch panel -->
+          <div class="panel">
+            <div class="panel-head">
+              <svg class="pbolt" viewBox="0 0 64 64"><path d="M37 4 L13 35 H27 L24 60 L51 27 H35 L40 4 Z" fill="#D4B978"/></svg>
+              <span class="pt">Win<b>Dispatch</b></span>
+              <span class="pid">#805247</span>
+            </div>
+            <div class="panel-body">
+              <div class="field-label">Truck</div>
+              <div class="select">Sprinter&nbsp;#1 · Columbus, OH <span class="chev">▾</span></div>
+              <div class="chips">
+                <span class="chip dist">307 mi</span>
+                <span class="chip eta">ETA 08:30 EST</span>
+              </div>
+              <div class="bid-wrap">
+                <div class="bid-cap">SUGGESTED BID</div>
+                <div class="bid-amount">$767.50</div>
+              </div>
+              <div class="panel-actions">
+                <button class="pbtn sec">Fill form</button>
+                <button class="pbtn pri">Submit bid</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-badge">
+            <span class="fb-ic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2BAA66" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>
+              <span class="fb-v">14 sec</span><br>
+              <span class="fb-l">avg. per bid</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM / SOLUTION ============ -->
+<section id="problem" data-screen-label="problem-solution">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The daily grind</span>
+      <h2>Stop wasting time on every bid</h2>
+      <p>Every load on Sylectus means the same manual steps. WinDispatch does them for you.</p>
+    </div>
+    <div class="ps-grid">
+      <div class="ps-col prob reveal">
+        <h3>Without WinDispatch</h3>
+        <div class="ps-item">
+          <span class="ps-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#C24B4B" stroke-width="2"/><path d="M12 7v5l3 2" stroke="#C24B4B" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <div><h4>Re-typing the same numbers</h4><p>Truck, mileage, ETA and bid amount — keyed in by hand on every single load.</p></div>
+        </div>
+        <div class="ps-item">
+          <span class="ps-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 16H3L12 3z" stroke="#C24B4B" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v4M12 16.5v.5" stroke="#C24B4B" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <div><h4>Math mistakes cost loads</h4><p>Rushing the rate-per-mile math leads to bids that are too high to win or too low to profit.</p></div>
+        </div>
+        <div class="ps-item">
+          <span class="ps-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12h13M11 7l5 5-5 5" stroke="#C24B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 5v14" stroke="#C24B4B" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <div><h4>You're always a step behind</h4><p>By the time the form is filled, a faster dispatcher already took the load.</p></div>
+        </div>
+      </div>
+      <div class="ps-col sol reveal">
+        <h3>With WinDispatch</h3>
+        <div class="ps-item">
+          <span class="ps-ic"><svg width="22" height="22" viewBox="0 0 64 64"><path d="M37 4 L13 35 H27 L24 60 L51 27 H35 L40 4 Z" fill="#D4B978"/></svg></span>
+          <div><h4>One click fills everything</h4><p>Pick a truck and the panel pre-fills the form with the right numbers instantly.</p></div>
+        </div>
+        <div class="ps-item">
+          <span class="ps-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 18V9M10 18V5M16 18v-6M22 18h-20" stroke="#D4B978" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <div><h4>Bid math done for you</h4><p>Set your rate-per-mile once. WinDispatch calculates a profitable bid for every load.</p></div>
+        </div>
+        <div class="ps-item">
+          <span class="ps-ic"><svg width="22" height="22" viewBox="0 0 64 64"><path d="M37 4 L13 35 H27 L24 60 L51 27 H35 L40 4 Z" fill="#D4B978"/></svg></span>
+          <div><h4>Submit in seconds</h4><p>Be the first bid in the queue — every time, on every load that fits your trucks.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features" data-screen-label="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Built for working dispatchers</span>
+      <h2>Everything you need to bid faster</h2>
+      <p>No bloat. Just the tools that get a winning bid into the form before anyone else.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal">
+        <span class="feat-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="13" height="9" rx="1.5" stroke="#D4B978" stroke-width="2"/><path d="M15 9h4l3 3v3h-7V9z" stroke="#D4B978" stroke-width="2" stroke-linejoin="round"/><circle cx="6" cy="17" r="2" stroke="#D4B978" stroke-width="2"/><circle cx="17" cy="17" r="2" stroke="#D4B978" stroke-width="2"/></svg></span>
+        <h3>Multi-truck manager</h3>
+        <p>Save every truck with its home base, rate and notes. Switch between them in one tap.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="feat-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#D4B978" stroke-width="2"/><path d="M12 7v5l3.5 2" stroke="#D4B978" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>ETA calculator</h3>
+        <p>Live drive-time from your truck's location to the pickup, accurate to the minute.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="feat-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18" stroke="#D4B978" stroke-width="2" stroke-linecap="round"/><path d="M16 7.5c0-1.7-1.8-2.5-4-2.5s-4 .9-4 2.7S9.8 10.5 12 11s4 1 4 3-1.8 2.7-4 2.7-4-.8-4-2.6" stroke="#D4B978" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <h3>Auto bid amount</h3>
+        <p>Your rate-per-mile × miles, with minimums and fuel built in. A smart number, every time.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="feat-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#D4B978" stroke-width="2"/><path d="M8 8h8M8 12h8M8 16h5" stroke="#D4B978" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <h3>Smart notes template</h3>
+        <p>Auto-fill the bid notes with your truck, equipment and availability — worded the way you like.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="feat-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M9 11l2 2 4-5" stroke="#D4B978" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 4h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z" stroke="#D4B978" stroke-width="2"/></svg></span>
+        <h3>One-click form fill</h3>
+        <p>WinDispatch maps directly onto the Sylectus bid form — no copy-paste, no tab switching.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="feat-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z" stroke="#D4B978" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="#D4B978" stroke-width="2"/></svg></span>
+        <h3>ZIP-based location</h3>
+        <p>Set truck positions by ZIP code. Distances and ETAs recalculate the moment a truck moves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how" class="how" data-screen-label="how-it-works">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Up and running in 2 minutes</span>
+      <h2>How it works</h2>
+      <p>No account, no onboarding calls. Install it and start bidding faster on the next load.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>Install</h3>
+        <p>Add WinDispatch to Chrome with one click. It loads automatically the next time you open Sylectus.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h3>Configure trucks</h3>
+        <p>Add your trucks with their home ZIP, rate-per-mile and notes. Takes about a minute per truck.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h3>Submit bids faster</h3>
+        <p>Open any load, pick the truck, and the panel fills the bid form. Submit before the competition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOCIAL PROOF ============ -->
+<section id="proof" class="proof" data-screen-label="social-proof">
+  <div class="wrap">
+    <div class="proof-stat reveal">
+      <span class="eyebrow">Trusted on the load board</span>
+      <div class="big" style="margin-top:14px;">Join <b>500+ dispatchers</b> saving time every day</div>
+    </div>
+    <div class="tgrid">
+      <div class="tcard reveal">
+        <div class="stars">★★★★★</div>
+        <q>I bid on twice as many loads now. The auto bid amount alone pays for itself — I stopped second-guessing every rate.</q>
+        <div class="tperson">
+          <span class="tavatar">MR</span>
+          <span><span class="tn">Marcus Reyes</span><br><span class="tc">Dispatcher · Keystone Expedite</span></span>
+        </div>
+      </div>
+      <div class="tcard reveal">
+        <div class="stars">★★★★★</div>
+        <q>Setup took five minutes and I haven't typed an ETA by hand since. Whoever built this clearly dispatches trucks.</q>
+        <div class="tperson">
+          <span class="tavatar">DT</span>
+          <span><span class="tn">Dana Thiel</span><br><span class="tc">Fleet Manager · Midline Carriers</span></span>
+        </div>
+      </div>
+      <div class="tcard reveal">
+        <div class="stars">★★★★★</div>
+        <q>Running six sprinters, I was drowning in tabs. Now I switch trucks and submit from one panel. Game changer.</q>
+        <div class="tperson">
+          <span class="tavatar">JO</span>
+          <span><span class="tn">Joel Okafor</span><br><span class="tc">Owner-Operator · Northbound Logistics</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section id="install" class="cta" data-screen-label="cta">
+  <div class="wrap">
+    <span class="eyebrow on-dark reveal">Free Chrome extension</span>
+    <h2 class="reveal" style="margin-top:14px;">Bid smarter. Win more loads.</h2>
+    <p class="reveal">Add WinDispatch to Chrome and submit your next bid in seconds.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-gold" href="#install">
+        <svg class="chrome" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="9" fill="#fff"/><path d="M24 5a19 19 0 0 1 16.45 9.5H24a9.5 9.5 0 0 0-8.23 4.75L8.6 6.9A19 19 0 0 1 24 5Z" fill="#0C1B33" opacity=".9"/><path d="M5 24a19 19 0 0 1 3.6-11.1l8.17 14.16A9.5 9.5 0 0 0 25 33l-4.2 9.8A19 19 0 0 1 5 24Z" fill="#1C3A5E"/><path d="M43 24a19 19 0 0 1-19 19l8.17-14.16A9.5 9.5 0 0 0 33 24a9.5 9.5 0 0 0-1.27-4.75H43c.66 0 1 .8 0 4.75Z" fill="#C2A35B"/></svg>
+        Add to Chrome — Free
+      </a>
+    </div>
+    <p class="cta-note reveal">No account needed. Works instantly.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <svg width="22" height="22" viewBox="0 0 64 64"><path d="M37 4 L13 35 H27 L24 60 L51 27 H35 L40 4 Z" fill="#D4B978"/></svg>
+      Win<b>Dispatch</b>
+    </div>
+    <div class="foot-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Support</a>
+      <span class="ver">v2.3.0</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // reveal disabled for reliability — content is always visible
+</script>
+</script>
+
+</body>
+</html>

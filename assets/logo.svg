@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="72" viewBox="0 0 320 72" font-family="&#39;Space Grotesk&#39;,sans-serif">
+  <rect width="320" height="72" fill="none"></rect>
+  <path d="M41 8 L17 39 H31 L28 64 L55 31 H39 L44 8 Z" fill="#D4B978"></path>
+  <text x="70" y="48" font-size="38" font-weight="700" letter-spacing="-1">
+    <tspan fill="#0C1B33">Win</tspan><tspan fill="#C2A35B">Dispatch</tspan>
+  </text>
+</svg>
