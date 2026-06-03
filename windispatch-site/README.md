@@ -60,4 +60,4 @@ Hero · Problem/Solution · Features (7) · Broker ratings spotlight · How it w
 - Confirm the testimonials (currently placeholder names/companies) before publishing.
 
 ---
-Version shown in UI: **v2.5.0**
+Version shown in UI: **v2.5.2**
