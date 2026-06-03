@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "vercel dev"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@vercel/kv": "^3.0.0"
   }
