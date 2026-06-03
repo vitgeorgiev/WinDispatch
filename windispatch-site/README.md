@@ -52,7 +52,7 @@ Hero · Problem/Solution · Features (6) · How it works (3 steps) · Social pro
 
 ## Deploy
 
-Drop the folder on any static host (GitHub Pages, Netlify, Vercel, Cloudflare Pages). For GitHub Pages, push to a repo and enable Pages on the root of the default branch.
+**Vercel** (recommended): import the repo with root directory `windispatch-site`, or run `npx vercel --prod` from this folder. Custom domain: `windispatch.com`.
 
 ## TODO before launch
 
